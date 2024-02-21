@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.BoxContainer{
+ 
+
+    width: 100vw;
+    height: 100vh;
+  
+
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,12,131,1) 2%, rgb(156, 168, 170) 5%);
+display: flex;
+
+justify-content: center;
+align-items: center;
+
+
+}
+.Fullbox{
+width: 1000px;
+height: 500px;
+background-color: rgb(216, 208, 208) ;
+display:flex;
+position: relative;
+overflow: hidden;
+
+
+}
+.Fullbox:hover::before{
+left: 0%;
+}
+.Fullbox::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    transition: left 5s ease; 
+}
+
+
+.Imagebox{
+    width: 50%;
+    height: 100%;
+ 
+    background-image: url('javascript-hero-1652702096795.jpeg');
+    background-size: contain;
+    background-position: center;
+}
+.Textbox{
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    display: flex ;
+    flex-direction: column;
+    gap: 65px;
+ 
+}
+
+#Content{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+#heading {
+    font-size: 1.2rem;
+}
+#Summary{
+ font-size: 1.2rem;
+ font-weight: bold;  
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+#Desc{
+    display: flex;
+    flex-direction: row;
+   justify-content: space-between;
+}
+#Number{
+    font-weight: bold;
+}
+#Comments{
+    font-size: smaller;
+}

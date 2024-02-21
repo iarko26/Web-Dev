@@ -1,0 +1,19 @@
+div{
+width: 1200px;
+height: 600px;
+margin: 20px;
+display: flex;
+justify-content: center;
+align-items: center;
+
+
+}
+.highlight{
+    border: solid black;
+    background-color: red;
+}
+.active{
+    border: solid blue;
+    background-color: navajowhite;
+}
+
