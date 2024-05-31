@@ -1,0 +1,265 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+}
+:root{
+    --main-background-color: #e3ecf1;
+    --main-text-color: #333;
+    --container-background-color: #eae4f0;
+    --slider-background-color: #ffffff;
+    --slider-bar-color: #8e3ead;
+    --slider-thumb-color: #8e3ead;
+    --slider-thumb-border-color: #ffffff;
+    --checkbox-lable-background-color: #e5a3ff8f;
+    --checkbox-lable-shadow-color: rgba(162, 0, 255, 0.2);
+    --checkbox-background-color: #ffffff00;
+    --checkbox-border-color: #555555;
+    --checkbox-border-checked-color: #8e3ead;
+    --checkbox-slider-color: #555555;
+    --checkbox-slider-checked-color: #8e3ead;
+    --button-color: #fff;
+    --copy-button-background-color: #8e3ead;
+    --copy-button-disabled-background-color: #ccc;
+    --password-output-background-color: #ffffff;
+    --selection-background-color: #8e3ead;
+    --selection-text-color: #fff;
+    --vb-cyan: hsl(176, 100%, 44%);
+
+
+}
+body{
+    background-color: var(--main-background-color);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.container{
+    background-color: var(--container-background-color);
+    max-width: 450px;
+
+
+}
+h1{
+    color: var(--main-text-color);
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 0.8;
+    line-height:1.2 ;
+    letter-spacing: 2px;
+
+} 
+.display{
+    background-color: whitesmoke;
+    border-radius: 1rem;
+    padding-top:0.35rem;
+    margin: 1rem 0;
+    border-bottom: 0.35rem solid var(--slider-bar-color);
+    position: relative;
+}
+
+.passdisplay{
+    width: 100%;
+    background-color: transparent;
+    padding: 1.15rem 1rem;
+    color: var(--main-text-color);
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+}
+
+.passdisplay:focus {
+    outline: none;
+    background-color: #f0f0f0; 
+    border-radius: 1.2rem;
+}
+
+.passdisplay::placeholder{
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: var(--main-text-color);
+    opacity: 0.5;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+
+.passdisplay::selection {
+    background: transparent; 
+    color: var(--main-text-color);  
+}
+
+.display button{
+    position:absolute;
+    top:50%;
+    right:1.5rem;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.passinfo{
+width: 100%;
+background-color: var(--container-background-color);
+border-radius: 1rem;
+padding: 2rem;
+border-bottom: 0.35rem solid var(--slider-bar-color);
+}
+.passlengthcon{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.passlengthcon h4{
+    color: var(--main-text-color);
+    font-size: 1.5rem;
+}
+.passlengthcon p{
+    color: var(--main-text-color);
+    font-size: 1.5rem;
+}
+.strengthcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.75rem;
+    margin-bottom: 2rem;
+}
+.strengthcontainer h4{
+    color: var(--main-text-color);
+    font-size: 1.5rem;
+
+}
+.btn-pass{
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--button-color);
+    border: none;
+    text-align: center;
+    border-radius: 0.75rem;
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 0.35rem solid var(--slider-bar-color);
+    color: var(--main-text-color);
+    cursor: pointer;
+}
+.check{
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+    gap: 0 1rem;
+
+  
+
+}
+.check input{
+      
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--checkbox-border-color);
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+}
+.check input:checked{
+    
+    background-color: var(--vb-cyan);
+}
+
+.check input:checked::before{
+    content: '✓';
+    position: absolute;
+    color: var(--checkbox-border-color);
+    font-size: 1.5rem;
+    font-weight: 500;
+    left: 50%;
+    top: 3.2px;
+    transform: translateX(-50%) translateY(-50%);
+}
+.check label{
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+    color: var(--main-text-color);
+}
+
+
+.copypass{
+    background-color: transparent;
+    border:none;
+    outline:none;
+}
+
+.copymssg {
+    position: absolute;
+    background-color: var(--copy-button-disabled-background-color);
+    color: var(--main-text-color);
+    font-size: 1.25rem;
+    top: -35px;
+    left: -25px;
+    padding: 5px 5px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+.copymssg.active {
+opacity: 1;
+transform: scale(1);
+}
+
+.slider{
+    appearance: none;
+    width: 100%;
+    height: 0.75rem;
+    border-radius: 1rem;
+    background-color: var(--slider-background-color);
+    cursor: pointer ;
+ 
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(var(--slider-bar-color), var(--slider-bar-color));
+   background-repeat: repeat;
+   z-index: -1;
+
+
+}
+.slider::-webkit-slider-thumb{
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: var(--slider-thumb-color);
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 0px 0px 20px 0px  white;
+
+    transition: all 100ms ease-in;
+}
+.slider::-webkit-slider-thumb:hover{
+    outline: 1px solid var(--slider-thumb-border-color);
+    background-color: var(--copy-button-disabled-background-color);
+    box-shadow: 0px 0px 25px 5px var(--checkbox-lable-background-color);
+}
+.slider:focus{
+    outline: 4px solid white;
+}
